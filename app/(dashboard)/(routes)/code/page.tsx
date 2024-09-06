@@ -25,7 +25,7 @@ import ReactMarkdown from "react-markdown";
 // import remarkGfm from "remark-gfm"; // For GitHub flavored markdown, like tables
 // import rehypeRaw from "rehype-raw";
 
-// Define ChatCompletionRequestMessage type manually
+// Manually define the ChatCompletionRequestMessage type
 type ChatCompletionRequestMessage = {
   role: "system" | "user" | "assistant";
   content: string;
