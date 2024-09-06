@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import axios from "axios";
 import * as z from "zod";
