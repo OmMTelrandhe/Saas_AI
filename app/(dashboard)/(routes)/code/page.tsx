@@ -14,8 +14,6 @@ import { Button } from "@/components/ui/button";
 
 import { useRouter } from "next/navigation";
 
-import { ChatCompletionRequestMessage } from "openai";
-
 import { useState } from "react";
 import { Empty } from "@/components/empty";
 import { Loader } from "@/components/loader";
@@ -26,6 +24,12 @@ import { BotAvatar } from "@/components/bot-avatar";
 import ReactMarkdown from "react-markdown";
 // import remarkGfm from "remark-gfm"; // For GitHub flavored markdown, like tables
 // import rehypeRaw from "rehype-raw";
+
+// Define ChatCompletionRequestMessage type manually
+type ChatCompletionRequestMessage = {
+  role: "system" | "user" | "assistant";
+  content: string;
+};
 
 const CodePage = () => {
   const router = useRouter();
